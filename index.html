@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="" alt="logo page">
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+        <picture>
+            <source 
+                media="(min-width: 768px)" 
+                srcset="img/banner-large-img/laptop-1280.jpg 1200w"
+            >
+            <source
+                media="(max-width: 768px)" 
+                srcset="
+                    img/banner-small-img/laptop-380.jpg 480w,
+                    img/banner-small-img/laptop-640.jpg 640w
+                "
+            >
+            <img src="img/banner-large-img/laptop-1920.jpg" alt="banner image">
+        </picture>
+    </section>
+    <main>
+        <section class="project-container">
+            <h2>Our projects</h2>
+            <div class="slide-container">
+                <div class="item-container">
+                    <div class="slider-item">item-1</div>
+                    <div class="slider-item">item-2</div>
+                    <div class="slider-item">item-3</div>
+                </div>
+                <div class="link-container">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+        </section>
+        <section class="skill-container">
+            <h2>Skills</h2>
+            <ul>
+                <li>
+                    <div>
+                        <p>Git</p>
+                        <div class="progress-bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>html</p>
+                        <div class="progress-bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>css</p>
+                        <div class="progress-bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>JavaScript</p>
+                        <div class="progress-bar"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="form-container">
+            <h2>Contact form</h2>
+            <form action="complete-register.html" method="post" novalidate>
+                <div class="input-container">
+                    <input required type="text" name="name" placeholder="Name">
+                </div>
+                <div class="input-container">
+                    <input required type="text" name="lastname" placeholder="Last name">
+                </div>
+                <div class="input-container">
+                    <input required type="email" name="email" placeholder="Email">
+                </div>
+                <div class="input-container">
+                    <input required type="tel" name="phone" placeholder="Phone">
+                </div>
+                <div class="input-radio-container">
+                    <input required type="radio" name="training" id="university" value="universidad">
+                    <label for="university">Universidad</label>
+                    <input required type="radio" name="training" id="keepcoding" value="keepcoding kick-off">
+                    <label for="keepcoding">Keepcoding kick-off</label>
+                    <input required type="radio" name="training" id="school" value="colegio">
+                    <label for="school">Colegio</label>
+                    <input required type="radio" name="training" id="github" value="en github">
+                    <label for="github">En Github</label>
+                </div>
+                <div class="input-container">
+                    <input required type="text" name="githubname" placeholder="@yoursername" value="@adrianducuara">
+                </div>
+                <div class="textarea-container">
+                    <textarea name="message" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit">send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="">twitter</a>
+            <a href="">snapchat</a>
+            <a href="">youtube</a>
+        </nav>
+    </footer>
+</body>
+</html>
