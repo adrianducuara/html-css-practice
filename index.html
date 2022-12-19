@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header>
-        <figure>
-            <img src="" alt="logo page">
-        </figure>
-        <nav>
-            <ul>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Contact</a></li>
+    <header class="header-container">
+        <div class="logo-container">
+            <h2 class="logo">{ A }</h2>
+        </div>
+        <nav class="nav-container">
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="items-container">
+                <li class="item"><a href="#project">Projects</a></li>
+                <li class="item"><a href="#skills">Skills</a></li>
+                <li class="item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -24,103 +32,141 @@
         <picture>
             <source 
                 media="(min-width: 768px)" 
-                srcset="img/banner-large-img/laptop-1280.jpg 1200w"
+                srcset="img/banner-large-img/laptop-1280.jpg"
             >
             <source
                 media="(max-width: 768px)" 
                 srcset="
-                    img/banner-small-img/laptop-380.jpg 480w,
-                    img/banner-small-img/laptop-640.jpg 640w
+                    img/banner-small-img/laptop-380.jpg,
                 "
             >
             <img src="img/banner-large-img/laptop-1920.jpg" alt="banner image">
         </picture>
+        <a class="btn-contact" href="#contact">Contact</a>
     </section>
-    <main>
-        <section class="project-container">
-            <h2>Our projects</h2>
-            <div class="slide-container">
-                <div class="item-container">
-                    <div class="slider-item">item-1</div>
-                    <div class="slider-item">item-2</div>
-                    <div class="slider-item">item-3</div>
-                </div>
-                <div class="link-container">
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                </div>
-            </div>
-        </section>
-        <section class="skill-container">
-            <h2>Skills</h2>
-            <ul>
-                <li>
-                    <div>
-                        <p>Git</p>
-                        <div class="progress-bar"></div>
+    <div class="wrapper">
+        <main>
+            <section class="project-container" id="project">
+                <h2>Our projects</h2>
+                <div class="slide-container">
+                    <div class="item-container">
+                        <div id="item1" class="slider-item">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="img/projects/project-large/page1-1280.jpg">
+                                <source media="(max-width: 768px)" srcset="img/projects/project-small/page1-640.jpg">
+                                <img src="img/projects/projet-large/page1-1280.jpg" alt="project image">
+                            </picture>
+                        </div>
+                        <div id="item2" class="slider-item">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="img/projects/project-large/page2-1280.jpg">
+                                <source media="(max-width: 768px)" srcset="img/projects/project-small/page2-640.jpg">
+                                <img src="img/projects/projet-large/page2-1280.jpg" alt="project image">
+                            </picture>
+                        </div>
+                        <div id="item3" class="slider-item">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="img/projects/project-large/page3-1280.jpg">
+                                <source media="(max-width: 768px)" srcset="img/projects/project-small/page3-640.jpg">
+                                <img src="img/projects/projet-large/page3-1280.jpg" alt="project image">
+                            </picture>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <div>
-                        <p>html</p>
-                        <div class="progress-bar"></div>
+                    <div class="link-container">
+                        <a href="#item1"></a>
+                        <a href="#item2"></a>
+                        <a href="#item3"></a>
                     </div>
-                </li>
-                <li>
-                    <div>
-                        <p>css</p>
-                        <div class="progress-bar"></div>
+                </div>
+            </section>
+            <section class="skill-container" id="skills">
+                <h2>Skills</h2>
+                <ul class="skills-list-container">
+                    <li class="skills-list-item">
+                        <div>
+                            <p>Git</p>
+                            <div class="progress-bar">
+                                <div class="filling-1"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skills-list-item">
+                        <div>
+                            <p>html</p>
+                            <div class="progress-bar">
+                                <div class="filling-2"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skills-list-item">
+                        <div>
+                            <p>css</p>
+                            <div class="progress-bar">
+                                <div class="filling-3"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skills-list-item">
+                        <div>
+                            <p>JavaScript</p>
+                            <div class="progress-bar">
+                                <div class="filling-4"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="form-container" id="contact">
+                <h2>Contact form</h2>
+                <form class="form" action="complete-register.html" method="post" novalidate>
+                    <div class="form-container-inputs">
+                        <div class="input-container">
+                            <input required type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="input-container">
+                            <input required type="text" name="lastname" placeholder="Last name">
+                        </div>
+                        <div class="input-container">
+                            <input required type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="input-container">
+                            <input required type="tel" name="phone" placeholder="Phone">
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <div>
-                        <p>JavaScript</p>
-                        <div class="progress-bar"></div>
+                    <div class="input-radio-container">
+                        <div class="input-radio">
+                            <input required type="radio" name="training" id="university" value="universidad">
+                            <label for="university">Universidad</label>
+                        </div>
+                        <div class="input-radio">
+                            <input required type="radio" name="training" id="keepcoding" value="keepcoding kick-off">
+                            <label for="keepcoding">Keepcoding kick-off</label>
+                        </div>
+                        <div class="input-radio">
+                            <input required type="radio" name="training" id="school" value="colegio">
+                            <label for="school">Colegio</label>
+                        </div>
+                        <div class="input-radio">
+                            <input required type="radio" name="training" id="github" value="en github">
+                            <label for="github">En Github</label>
+                        </div>
                     </div>
-                </li>
-            </ul>
-        </section>
-        <section class="form-container">
-            <h2>Contact form</h2>
-            <form action="complete-register.html" method="post" novalidate>
-                <div class="input-container">
-                    <input required type="text" name="name" placeholder="Name">
-                </div>
-                <div class="input-container">
-                    <input required type="text" name="lastname" placeholder="Last name">
-                </div>
-                <div class="input-container">
-                    <input required type="email" name="email" placeholder="Email">
-                </div>
-                <div class="input-container">
-                    <input required type="tel" name="phone" placeholder="Phone">
-                </div>
-                <div class="input-radio-container">
-                    <input required type="radio" name="training" id="university" value="universidad">
-                    <label for="university">Universidad</label>
-                    <input required type="radio" name="training" id="keepcoding" value="keepcoding kick-off">
-                    <label for="keepcoding">Keepcoding kick-off</label>
-                    <input required type="radio" name="training" id="school" value="colegio">
-                    <label for="school">Colegio</label>
-                    <input required type="radio" name="training" id="github" value="en github">
-                    <label for="github">En Github</label>
-                </div>
-                <div class="input-container">
-                    <input required type="text" name="githubname" placeholder="@yoursername" value="@adrianducuara">
-                </div>
-                <div class="textarea-container">
-                    <textarea name="message" cols="30" rows="10"></textarea>
-                </div>
-                <button type="submit">send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <nav>
-            <a href="">twitter</a>
-            <a href="">snapchat</a>
-            <a href="">youtube</a>
+                    <div class="input-container">
+                        <input required type="text" name="githubname" placeholder="@yoursername" value="@adrianducuara">
+                    </div>
+                    <div class="textarea-container">
+                        <textarea name="message" cols="30" rows="10"></textarea>
+                    </div>
+                    <button class="btnSubmit" type="submit">send</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer class="footer-container">
+        <nav class="footer-container-item">
+            <a href=""><img class="icon" src="img/icons/twitter.svg" alt="icon twitter"></a>
+            <a href=""><img class="icon" src="img/icons/twitch.svg" alt="icon twitch"></a>
+            <a href=""><img class="icon" src="img/icons/youtube.svg" alt="icon youtube"></a>
         </nav>
     </footer>
 </body>
