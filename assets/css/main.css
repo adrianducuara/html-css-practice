@@ -1,0 +1,356 @@
+:root {
+    --dark-navy: #020c1b;
+    --dark-slate: #495670;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --lightest-slate: #ccd6f6;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --slate: #8892b0;
+    --white: #e6f1ff;
+    --green: rgb(100, 255, 218);
+    --blue: #57cbff;
+    --roboto-regular: 'Roboto-Regular', sans-serif;
+    --roboto-bold: 'Roboto-Bold', sans-serif;
+}
+
+body {
+    background-color: var(--navy);
+    box-sizing: border-box;
+    color: var(--slate);
+    font-family: var(--roboto-regular);
+    font-size: 1.6rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* globals */
+.wrapper {
+    padding: 20px;
+}
+
+.skills-list-container,
+.items-container {
+    list-style: none;
+    padding: 0;
+}
+
+h2 {
+    color: var(--lightest-slate);
+}
+
+.icon {
+    width: 20px;
+}
+
+/* logo */
+.logo {
+    color: var(--green);
+    margin: 0;
+}
+
+/* header */
+.header-container {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner {
+    position: relative;
+    min-width: 320px;
+    max-width: 1490px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.btn-contact {
+    border: 2px solid var(--green);
+    background-color: var(--navy);
+    border-radius: 3px;
+    color: var(--white);
+    position: absolute;
+    padding: 10px 20px;
+    top: 230px;
+    text-decoration: none;
+    right: 108px;
+}
+
+.btn-contact,
+.btnSubmit {
+    transition: .3s ease-in-out;
+}
+
+.btn-contact:hover {
+    background-color: var(--green);
+    color: var(--dark-navy);
+}
+
+.item1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.burger-menu > span {
+    background-color: var(--green);
+    display: block;
+    height: 2px;
+    width: 30px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+.burger-menu {
+    cursor: pointer;
+    padding: 15px;
+}
+
+.nav-container .items-container {
+    display: none;
+}
+
+.items-container .item {
+    padding: 3px 20px 20px;
+}
+
+.items-container .item a {
+    color: var(--lightest-slate);
+    text-decoration: none;
+}
+
+/* slider */
+.item-container {
+    align-items: center;
+    display: flex;
+    height: 30vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.slider-item {
+    align-items: center;
+    background-color: var(--dark-navy);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.link-container a {
+    border-radius: 50%;
+    background-color: var(--blue);
+    height: 12px;
+    width: 12px;
+}
+
+.link-container a:nth-child(2) {
+    margin: 0 5px;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* skills */
+.skills-list-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-list-item {
+    margin: 15px;
+}
+
+/* bar-progress */
+.progress-bar {
+    border: 1px solid var(--green);
+    height: 10px;
+    width: 100px;
+    box-shadow: -10px 0px 30px -15px var(--lightest-navy);
+}
+.progress-bar > div {
+    background-color: var(--white);
+    height: 100%;
+}
+.filling-1 {
+    width: 40%;
+    animation-name: filling-1;
+    animation-duration: 4s;
+}
+.filling-2 {
+    width: 90%;
+    animation-name: filling-2;
+    animation-duration: 4s;
+}
+.filling-3 {
+    width: 80%;
+    animation-name: filling-3;
+    animation-duration: 4s;
+}
+.filling-4 {
+    width: 60%;
+    animation-name: filling-4;
+    animation-duration: 4s;
+}
+
+/* form */
+.form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.input-container,
+.input-radio-container,
+.input-radio {
+    margin-bottom: 20px;
+}
+
+.input-container input{
+    padding: 5px 15px;
+}
+
+.input-container input, button {
+    border-radius: 3px;
+}
+
+.input-radio label {
+    vertical-align: middle;
+}
+
+.input-radio input {
+    accent-color: var(--green);
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.input-radio input,
+.input-container input,
+.textarea-container textarea,
+.btnSubmit {
+    border: 2px solid var(--green);
+    background-color: transparent;
+    color: var(--green);
+    outline: none;
+}
+
+.btnSubmit {
+    cursor: pointer;
+    height: 30px;
+    margin: 5px 0 0 2px;
+    width: 100px;   
+}
+
+.btnSubmit:hover {
+    background-color: var(--dark-navy);
+    color: var(--lightest-slate);
+}
+
+.footer-container {
+    border-top: 1px solid var(--green);
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container-item {
+    padding: 10px 20px;
+    background: var(--blue);
+}
+
+.footer-container-item a:nth-child(2){
+    margin: 0 10px;
+}
+
+
+@media (min-width: 1024px) {
+    .wrapper {
+        max-width: 1000px;
+        min-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header-container {
+        height: 70px;
+    }
+
+    .nav-container .items-container {
+       display: flex;
+    }
+
+    .nav-container .items-container .item {
+        padding: 0 20px;
+    }
+    
+    .banner {
+        height: 500px;
+    }
+
+    .item-container {
+        height: 60vh;
+    }
+
+    .btn-contact {
+        padding: 20px 50px;
+        right: 250px;
+        top: 270px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .item-container picture {
+        width: 100%;
+    }
+
+    .input-radio-container,
+    .textarea-container,
+    .input-container {
+        place-self: start;
+    }
+
+    .progress-bar {
+        height: 20px;
+        width: 200px;
+    }
+
+    .form {
+        display: block;
+        width: 100%;
+    }
+
+    .form-container-inputs {
+        display: flex;
+    }
+
+    .form-container-inputs .input-container {
+        margin-right: 20px;
+    }
+
+}
