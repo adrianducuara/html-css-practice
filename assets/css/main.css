@@ -54,23 +54,25 @@ h2 {
 /* header */
 .header-container {
     align-items: center;
+    box-shadow: 0 10px 30px -10px var(--navy-shadow);
     display: flex;
-    height: 35px;
+    height: 50px;
     justify-content: space-between;
+    margin-bottom: 30px;
     padding: 0 20px;
 }
 
 .banner img {
     height: 100%;
-    width: 100%;
     object-fit: cover;
+    width: 100%;
 }
 
 .banner {
-    position: relative;
     min-width: 320px;
     max-width: 1490px;
     margin: 0 auto;
+    position: relative;
     width: 100%;
 }
 
@@ -117,11 +119,31 @@ h2 {
 }
 
 .nav-container .items-container {
+    background-color: var(--lightest-navy);
+    box-shadow: -10px 0px 30px -15px var(--navy-shadow);
+    bottom: 0;
     display: none;
+    height: 100vh;
+    margin: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 250px;
+    z-index: 1;
+}
+
+.burger-menu:hover ~ .items-container,
+.items-container:hover {
+    display: block;
 }
 
 .items-container .item {
-    padding: 3px 20px 20px;
+    padding: 30px;
+}
+
+.items-container .item:hover > a {
+    color: var(--blue);
 }
 
 .items-container .item a {
@@ -193,17 +215,17 @@ h2 {
 .filling-1 {
     width: 40%;
     animation-name: filling-1;
-    animation-duration: 4s;
+    animation-duration: 15s;
 }
 .filling-2 {
     width: 90%;
     animation-name: filling-2;
-    animation-duration: 4s;
+    animation-duration: 15s;
 }
 .filling-3 {
     width: 80%;
     animation-name: filling-3;
-    animation-duration: 4s;
+    animation-duration: 15s;
 }
 .filling-4 {
     width: 60%;
@@ -266,8 +288,8 @@ h2 {
 }
 
 .btnSubmit:hover {
-    background-color: var(--dark-navy);
-    color: var(--lightest-slate);
+    background-color: var(--blue);
+    color: var(--dark-navy);
 }
 
 .footer-container {
@@ -300,13 +322,27 @@ h2 {
     }
 
     .nav-container .items-container {
-       display: flex;
+        background-color: transparent;
+        box-shadow: none;
+        display: flex;
+        height: inherit;
+        position: static;
+        width: 100%;
     }
 
     .nav-container .items-container .item {
-        padding: 0 20px;
+        padding: 20px;
+        transition: .4s ease-out;
     }
     
+    .items-container .item:hover {
+        background-color: var(--green);
+    }
+
+    .items-container .item:hover a {
+        color: var(--dark-navy);
+    }
+
     .banner {
         height: 500px;
     }
