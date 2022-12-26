@@ -1,7 +1,16 @@
 :root {
-    --gray: #777;
-    --white: #fff;
+    --black: #000;
+    --box-shadow: rgb(0 0 0 / 12%);
+    --gray: #f6f5fa;
     --Roboto-Regular: 'Roboto-Regular', sans-serif;
+    --white: #fff;
+}
+
+.wrapper {
+    min-width: 320px;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 html {
@@ -9,10 +18,130 @@ html {
     font-family: var(--Roboto-Regular);
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+body {
+    background-color: var(--gray);
+    font-size: 1.6rem;
+}
+
 .header-container {
     background-color: var(--white);
+    box-shadow: 0 0 60px var(--box-shadow);
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.navigator-back {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.header-nav-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.navigator-back > span {
+    display: none;
+}
+
+.container-video {
+    width: 100%;
+}
+
+.video {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 100%;
 }
 
 .main-container {
-    background-color: var(--gray);
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.container-video {
+    text-align: center;
+}
+
+.items-container-product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.item-project {
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.item-project:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.item-project figure {
+    margin: 0;
+}
+
+.item-project img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.footer-container {
+    align-items: center;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.footer-container img {
+    width: 20px;
+}
+
+.footer-container a:nth-child(2) {
+    margin: 0 20px;
+}
+
+@media(min-width: 768px) {
+    .items-container-product {
+        grid-template-columns: repeat(2, 260px);
+        justify-content: center;
+    }
+
+    .navigator-back span {
+        display: inline-block;
+    }
+}
+
+@media(min-width: 1024px) {
+    .items-container-product {
+        grid-template-columns: repeat(3, 260px);
+    }
+
+    .video {
+        max-width: 800px;
+        width: 100%;
+    }
+}
+
+@media(min-width: 1440px) {
+    .items-container-product {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .video {
+        max-width: 900px;
+        width: 100%;
+    }
 }
