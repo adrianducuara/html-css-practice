@@ -1,16 +1,16 @@
 @keyframes filling-1 {
     from {width: 0%;}
-    to {width: 40%;}
+    to {width: 50%;}
 }
 @keyframes filling-2 {
     from {width: 0%;}
-    to {width: 90%;}
+    to {width: 60%;}
 }
 @keyframes filling-3 {
     from {width: 0%;}
-    to {width: 80%;}
+    to {width: 70%;}
 }
 @keyframes filling-4 {
     from {width: 0%;}
-    to {width: 60%;}
+    to {width: 80%;}
 }
