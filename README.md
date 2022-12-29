@@ -41,5 +41,5 @@ HTTPS connection:
 git clone https://github.com/adrianducuara/html-css-practice.git
 ```
 
-## Project preview
+## Project preview 🚀
 We decided to create a portfolio for adrums my nikname. You could take a look to the project deployed with GitHub pages [here](https://adrianducuara.github.io/html-css-practice/)
