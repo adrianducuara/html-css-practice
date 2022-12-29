@@ -14,3 +14,16 @@
     from {width: 0%;}
     to {width: 80%;}
 }
+
+@keyframes eye {
+    0% {left: 0px;}
+    20% {bottom: 0px;}
+    30% {left: 20px;}
+    40% {right: 40px}
+    80% {left: 0px}
+    100% {left: 40px;}
+}
+
+@keyframes number {
+    0% { font-size: 13rem;}
+}
